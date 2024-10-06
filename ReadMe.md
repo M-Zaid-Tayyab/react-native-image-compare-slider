@@ -1,6 +1,3 @@
-# react-native-image-compare-slider
- Image comparison component for two images in react native
-
 ## Demo
 
 [Click to watch the demo](https://drive.google.com/file/d/1H48izffUdaRE1ZLLwwxEQBWprIaKpGdA/view?usp=sharing)

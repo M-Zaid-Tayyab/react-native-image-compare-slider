@@ -1,6 +1,6 @@
 {
   "name": "react-native-image-compare-slider",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A React Native component to compare two images with a slider",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
