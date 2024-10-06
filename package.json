@@ -1,6 +1,6 @@
 {
   "name": "react-native-image-compare-slider",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A React Native component to compare two images with a slider",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -26,7 +26,6 @@
   "dependencies": {
     "react": ">=18.0.0",
     "react-native": ">=0.74.0",
-    "react-native-fast-image": "^8.6.3",
     "react-native-gesture-handler": "^2.17.1",
     "react-native-reanimated": "^3.13.0",
     "react-native-responsive-screen": "^1.4.2"
