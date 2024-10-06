@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES5",                     // Compile to ES5 for compatibility
+    "module": "commonjs",                // CommonJS module system
+    "declaration": true,                 // Generate .d.ts files for types
+    "outDir": "./dist",                  // Output compiled JS to the dist folder
+    "strict": true,                      // Enable strict type-checking options
+    "esModuleInterop": true,             // Allows default imports from CommonJS modules
+    "skipLibCheck": true,                
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react"
+  },
+  "include": [
+    "components/**/*"                    
+  ],
+  "exclude": [
+    "node_modules",                      
+    "dist"                               
+  ]
+}
