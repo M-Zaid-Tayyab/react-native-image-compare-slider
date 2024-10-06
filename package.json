@@ -1,6 +1,6 @@
 {
   "name": "react-native-image-compare-slider",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React Native component to compare two images with a slider",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -17,6 +17,10 @@
     "slider",
     "typescript"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zaid-00/react-native-image-compare-slider"
+  },
   "author": "Zaid",
   "license": "MIT",
   "dependencies": {
