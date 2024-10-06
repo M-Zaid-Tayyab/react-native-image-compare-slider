@@ -1,5 +1,5 @@
 import React from "react";
-import { Dimensions, View, Image } from "react-native";
+import { Dimensions, Image, View } from "react-native";
 import { Gesture, GestureDetector } from "react-native-gesture-handler";
 import Animated, {
   useAnimatedStyle,
@@ -28,6 +28,7 @@ const ImageCompareSlider = ({
   const translationX = useSharedValue(SCREEN_WIDTH / 2);
 
   const gesture = Gesture.Pan().onUpdate((event) => {
+    "worklet";
     const newTranslationX = event.absoluteX;
     if (newTranslationX < upperBound && newTranslationX > lowerBound) {
       translationX.value = newTranslationX;
@@ -49,16 +50,18 @@ const ImageCompareSlider = ({
         <Image source={image1} style={[styles.image1, image2Style]} />
       </Animated.View>
       <GestureDetector gesture={gesture}>
-        <Animated.View style={[styles.slider, animatedSliderStyle]}>
-          <Image
-            source={slider}
-            style={{
+        <Animated.Image
+          source={slider}
+          style={[
+            animatedSliderStyle,
+            {
+              position: "absolute",
               width: sliderWidth ? sliderWidth : wp(6),
               height: sliderHeight ? sliderHeight : "100%",
-            }}
-            resizeMode="stretch"
-          />
-        </Animated.View>
+            },
+          ]}
+          resizeMode="stretch"
+        />
       </GestureDetector>
     </View>
   );

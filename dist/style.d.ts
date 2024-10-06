@@ -23,7 +23,6 @@ export declare const styles: {
     slider: {
         position: "absolute";
         top: number;
-        bottom: number;
         justifyContent: "center";
         alignItems: "center";
     };

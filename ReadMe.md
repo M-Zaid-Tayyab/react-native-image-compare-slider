@@ -26,10 +26,10 @@ Make sure to install following dependencies
 - **`image2`** (`ImageSource`, Required): The source of the second image (on the right side of the slider).
 - **`slider`** (`ImageSource`, Required): The slider image between the two images.
 - **`style`** (`ViewStyle`, Optional): Custom styles for the slider container.
-- **`image1Style`** (`ImageStyle`, Optional): Custom styles for the first image (left image).
-- **`image2Style`** (`ImageStyle`, Optional): Custom styles for the second image (right image).
-- **`sliderWidth`** (`String|Number`, Optional): Width value for the slider image.
-- **`sliderHeight`** (`String|Number`, Optional): Height value for the slider image.
+- **`image1Style`** (`ImageStyle`, Required): Custom styles for the first image (left image).
+- **`image2Style`** (`ImageStyle`, Required): Custom styles for the second image (right image).
+- **`sliderWidth`** (`Number`, Required): Width value for the slider image.
+- **`sliderHeight`** (`String|Number`, Required): Height value for the slider image.
 - **`screenNormalizingValue`** (`String|Number`, Optional): Threshold value for the right side screen (Till where can slider move).
 ## Usage/Examples
 
@@ -46,7 +46,7 @@ function App() {
         image2Style={{height: '50%',width:'100%'}}
         slider={require('./slider.png')}
         sliderHeight={'100%'}
-        sliderWidth={'7%'}
+        sliderWidth={15}
       />
    )
 }

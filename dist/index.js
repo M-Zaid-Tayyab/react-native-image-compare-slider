@@ -39,6 +39,7 @@ var ImageCompareSlider = function (_a) {
     var lowerBound = 0;
     var translationX = (0, react_native_reanimated_1.useSharedValue)(SCREEN_WIDTH / 2);
     var gesture = react_native_gesture_handler_1.Gesture.Pan().onUpdate(function (event) {
+        "worklet";
         var newTranslationX = event.absoluteX;
         if (newTranslationX < upperBound && newTranslationX > lowerBound) {
             translationX.value = newTranslationX;
@@ -55,10 +56,13 @@ var ImageCompareSlider = function (_a) {
         react_1.default.createElement(react_native_reanimated_1.default.View, { style: [style_1.styles.overlay, animatedOverlayStyle] },
             react_1.default.createElement(react_native_1.Image, { source: image1, style: [style_1.styles.image1, image2Style] })),
         react_1.default.createElement(react_native_gesture_handler_1.GestureDetector, { gesture: gesture },
-            react_1.default.createElement(react_native_reanimated_1.default.View, { style: [style_1.styles.slider, animatedSliderStyle] },
-                react_1.default.createElement(react_native_1.Image, { source: slider, style: {
+            react_1.default.createElement(react_native_reanimated_1.default.Image, { source: slider, style: [
+                    animatedSliderStyle,
+                    {
+                        position: "absolute",
                         width: sliderWidth ? sliderWidth : (0, react_native_responsive_screen_1.widthPercentageToDP)(6),
                         height: sliderHeight ? sliderHeight : "100%",
-                    }, resizeMode: "stretch" })))));
+                    },
+                ], resizeMode: "stretch" }))));
 };
 exports.default = ImageCompareSlider;

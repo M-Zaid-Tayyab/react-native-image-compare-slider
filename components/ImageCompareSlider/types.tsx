@@ -5,7 +5,7 @@ export interface Props{
     image1Style:any;
     image2Style:any;
     style?:any;
-    sliderWidth:any;
+    sliderWidth:number;
     sliderHeight:any;
     screenNormalizingValue?:any;
 
