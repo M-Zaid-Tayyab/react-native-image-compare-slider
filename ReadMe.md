@@ -29,8 +29,8 @@ Make sure to install following dependencies
 - **`image1Style`** (`ImageStyle`, Required): Custom styles for the first image (left image).
 - **`image2Style`** (`ImageStyle`, Required): Custom styles for the second image (right image).
 - **`sliderWidth`** (`Number`, Required): Width value for the slider image.
-- **`sliderHeight`** (`String|Number`, Required): Height value for the slider image.
-- **`screenNormalizingValue`** (`String|Number`, Optional): Threshold value for the right side screen (Till where can slider move).
+- **`sliderHeight`** (`Number`, Required): Height value for the slider image.
+- **`screenNormalizingValue`** (`Number`, Optional): Threshold value for the right side screen (Till where can slider move).
 ## Usage/Examples
 
 ```javascript
