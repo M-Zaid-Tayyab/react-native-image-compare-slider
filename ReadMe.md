@@ -45,7 +45,7 @@ function App() {
         image1Style={{height: '50%',width:'100%'}}
         image2Style={{height: '50%',width:'100%'}}
         slider={require('./slider.png')}
-        sliderHeight={'100%'}
+        sliderHeight={200}
         sliderWidth={15}
       />
    )
