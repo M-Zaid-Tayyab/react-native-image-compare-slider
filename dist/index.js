@@ -35,7 +35,9 @@ var style_1 = require("./style");
 var SCREEN_WIDTH = react_native_1.Dimensions.get("window").width;
 var ImageCompareSlider = function (_a) {
     var image1 = _a.image1, image2 = _a.image2, slider = _a.slider, style = _a.style, image1Style = _a.image1Style, image2Style = _a.image2Style, sliderWidth = _a.sliderWidth, sliderHeight = _a.sliderHeight, screenNormalizingValue = _a.screenNormalizingValue;
-    var upperBound = SCREEN_WIDTH - (sliderWidth - (0, react_native_responsive_screen_1.widthPercentageToDP)(screenNormalizingValue || 2.8));
+    var upperBound = SCREEN_WIDTH -
+        sliderWidth -
+        (screenNormalizingValue ? screenNormalizingValue : (0, react_native_responsive_screen_1.widthPercentageToDP)(2.8));
     var lowerBound = 0;
     var translationX = (0, react_native_reanimated_1.useSharedValue)(SCREEN_WIDTH / 2);
     var gesture = react_native_gesture_handler_1.Gesture.Pan().onUpdate(function (event) {
@@ -61,7 +63,7 @@ var ImageCompareSlider = function (_a) {
                     {
                         position: "absolute",
                         width: sliderWidth ? sliderWidth : (0, react_native_responsive_screen_1.widthPercentageToDP)(6),
-                        height: sliderHeight ? sliderHeight : "100%",
+                        height: sliderHeight ? sliderHeight : (0, react_native_responsive_screen_1.heightPercentageToDP)(100),
                     },
                 ], resizeMode: "stretch" }))));
 };

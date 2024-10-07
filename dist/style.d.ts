@@ -20,10 +20,4 @@ export declare const styles: {
         height: "100%";
         overflow: "hidden";
     };
-    slider: {
-        position: "absolute";
-        top: number;
-        justifyContent: "center";
-        alignItems: "center";
-    };
 };

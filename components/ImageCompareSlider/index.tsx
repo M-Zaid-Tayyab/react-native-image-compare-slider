@@ -5,7 +5,10 @@ import Animated, {
   useAnimatedStyle,
   useSharedValue,
 } from "react-native-reanimated";
-import { widthPercentageToDP as wp } from "react-native-responsive-screen";
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 import { styles } from "./style";
 import { Props } from "./types";
 
@@ -23,7 +26,9 @@ const ImageCompareSlider = ({
   screenNormalizingValue,
 }: Props) => {
   const upperBound =
-    SCREEN_WIDTH - (sliderWidth - wp(screenNormalizingValue || 2.8));
+    SCREEN_WIDTH -
+    sliderWidth -
+    (screenNormalizingValue ? screenNormalizingValue : wp(2.8));
   const lowerBound = 0;
   const translationX = useSharedValue(SCREEN_WIDTH / 2);
 
@@ -57,7 +62,7 @@ const ImageCompareSlider = ({
             {
               position: "absolute",
               width: sliderWidth ? sliderWidth : wp(6),
-              height: sliderHeight ? sliderHeight : "100%",
+              height: sliderHeight ? sliderHeight : hp(100),
             },
           ]}
           resizeMode="stretch"

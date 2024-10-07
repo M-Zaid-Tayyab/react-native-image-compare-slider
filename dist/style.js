@@ -24,11 +24,5 @@ exports.styles = react_native_1.StyleSheet.create({
         position: 'absolute',
         height: '100%',
         overflow: 'hidden',
-    },
-    slider: {
-        position: 'absolute',
-        top: 0,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
+    }
 });
